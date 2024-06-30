@@ -11,6 +11,12 @@ public class MathExamplesTest
     @Test
     void testAdd()
     {
-        assertEquals(8,MathExamples.add(5,3));
+        assertEquals(8, MathExamples.add(5,3));
+    }
+
+    @Test
+    void testMultiply() 
+    {
+        assertEquals(15, MathExamples.multiply(5,3));
     }
 }
