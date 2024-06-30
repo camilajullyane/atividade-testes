@@ -13,4 +13,9 @@ public class MathExamplesTest
     {
         assertEquals(8,MathExamples.add(5,3));
     }
+
+    @Test
+    void testSubtract() {
+        assertEquals(2, MathExamples.subtract(5, 3));
+    }
 }
