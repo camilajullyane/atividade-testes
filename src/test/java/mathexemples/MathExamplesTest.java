@@ -19,4 +19,9 @@ public class MathExamplesTest
     {
         assertEquals(15, MathExamples.multiply(5,3));
     }
+
+    @Test
+    void testSubtract() {
+        assertEquals(2, MathExamples.subtract(5, 3));
+    }
 }
