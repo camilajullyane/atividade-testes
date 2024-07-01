@@ -28,7 +28,9 @@ public class MathExamples
         System.out.println(dblNumE + " + " + dblNumF + " = " + add(dblNumE, dblNumF));
         System.out.println((0.1f == 0.1d));
         System.out.println(bdNumE + " + " + bdNumF + " = " + add(bdNumE, bdNumF));
-        System.out.println(dblNumC +  " - "  + dblNumD + " = " + subtract(dblNumC,dblNumD));
+        System.out.println(dblNumC +  " - "  + dblNumD + " = " + subtract(dblNumC, dblNumD));
+        System.out.println(dblNumC + " x " + dblNumD + " = " + multiply(dblNumC, dblNumD));
+        System.out.println(dblNumC + " " + (char)247 + " " + dblNumD +  " = "  + divide(dblNumC, dblNumD));
     }
 
     public static int add(int intNum1, int intNum2) {
@@ -62,4 +64,13 @@ public class MathExamples
     public static double subtract(double dblNum1, double dblNum2) {
         return dblNum1 - dblNum2;
     }
+
+    public static double multiply(double dblNum1, double dblNum2) {
+        return dblNum1 * dblNum2;
+    }
+
+    public static double divide(double dblNum1, double dblNum2) {
+        return dblNum1 / dblNum2;
+    }
+
 }
