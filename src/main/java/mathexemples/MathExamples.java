@@ -1,7 +1,7 @@
 package mathexemples;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-
+import java.text.DecimalFormat;
 public class MathExamples 
 {
     public static void main( String[] args )
@@ -16,7 +16,7 @@ public class MathExamples
         RoundingMode rmHalfUp = RoundingMode.HALF_UP;
         BigDecimal bdNumE = new BigDecimal (0.1).setScale(1, rmHalfUp);
         BigDecimal bdNumF = new BigDecimal (0.2).setScale(1, rmHalfUp);
-
+        DecimalFormat dFormat = new DecimalFormat("#, ###.###");
 
 
         System.out.println(intNumA + " + " +  intNumB + " = " + add(intNumA,intNumB));
@@ -31,7 +31,10 @@ public class MathExamples
         System.out.println(bdNumE + " + " + bdNumF + " = " + add(bdNumE, bdNumF));
         System.out.println(dblNumC +  " - "  + dblNumD + " = " + subtract(dblNumC, dblNumD));
         System.out.println(dblNumC + " x " + dblNumD + " = " + multiply(dblNumC, dblNumD));
-        System.out.println(dblNumC + " " + (char)247 + " " + dblNumD +  " = "  + divide(dblNumC, dblNumD));
+        System.out.println (dblNumC + " " + (char) 247 + " " + dblNumD + " = "+ dFormat.format(divide(dblNumC,dblNumD)));        
+        System.out.println(dblNumC + " to the power of " + dblNumD + " = " + dFormat.format(exponent(dblNumC,dblNumD)));
+        System.out.println("The sguare root of " + dblNumC + " = "+ dFormat.format(squareRoot(dblNumC)));
+
     }
 
     public static int add(int intNum1, int intNum2) {
@@ -76,6 +79,14 @@ public class MathExamples
 
     public static double divide(double dblNum1, double dblNum2) {
         return dblNum1 / dblNum2;
+    }
+
+    public static double exponent(double base, double power) {
+        return Math.pow(base, power);
+        }
+
+    public static double squareRoot(double number) {
+        return Math.sqrt(number);
     }
 
 }
