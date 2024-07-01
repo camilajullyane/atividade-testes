@@ -2,6 +2,7 @@ package mathexemples;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.text.DecimalFormat;
 
 public class MathExamples 
 {
@@ -22,8 +23,9 @@ public class MathExamples
 
 
         System.out.println(intNumA + " + " +  intNumB + " = " + add(intNumA,intNumB));
-        System.out.println(intNumA + " x " + intNumB + " = "+ multiply(intNumA,intNumB));
         System.out.println(intNumA +  " - " + intNumB + " = " + subtract(intNumA,intNumB));
+        System.out.println(intNumA + " x " + intNumB + " = "+ multiply(intNumA,intNumB));
+        System.out.println(intNumA + " " + (char)247 + " " + intNumB + " = " + divide(intNumA,intNumB));
         System.out.println(intNumA +  " mod " + intNumB + " = " + modulo(intNumA,intNumB));
         System.out.println(intNumA +  " to the power of " + intNumB + " = " + exponent(intNumA,intNumB));
         System.out.println(dblNumC + " + " + dblNumD + " = " + add(dblNumC,dblNumD));
@@ -33,6 +35,12 @@ public class MathExamples
         System.out.println("The cube root of " + dblNumC + " = " + cubeRoot(dblNumC));
         System.out.println("The absolute value of " + dblNumC + " = " + dFormat.format(absoluteVal(dblNumC)));
         System.out.println("The absolute value of " + dblNumG + " = " + dFormat.format(absoluteVal(dblNumG)));
+        System.out.println(dblNumC +  " - "  + dblNumD + " = " + subtract(dblNumC, dblNumD));
+        System.out.println(dblNumC + " x " + dblNumD + " = " + multiply(dblNumC, dblNumD));
+        System.out.println (dblNumC + " " + (char) 247 + " " + dblNumD + " = "+ dFormat.format(divide(dblNumC,dblNumD)));        
+        System.out.println(dblNumC + " to the power of " + dblNumD + " = " + dFormat.format(exponent(dblNumC,dblNumD)));
+        System.out.println("The sguare root of " + dblNumC + " = "+ dFormat.format(squareRoot(dblNumC)));
+
     }
 
     public static int add(int intNum1, int intNum2) {
@@ -45,6 +53,10 @@ public class MathExamples
     
     public static int subtract(int intNum1, int intNum2) {
         return intNum1 - intNum2;
+    }
+
+    public static int divide(int intDividend, int intDivisor) {
+        return intDividend / intDivisor;
     }
 
     public static int modulo(int intDividend, int intDivisor) {
@@ -70,4 +82,24 @@ public class MathExamples
      public static double absoluteVal(double number) {
         return Math.abs(number);  
     }
+    public static double subtract(double dblNum1, double dblNum2) {
+        return dblNum1 - dblNum2;
+    }
+
+    public static double multiply(double dblNum1, double dblNum2) {
+        return dblNum1 * dblNum2;
+    }
+
+    public static double divide(double dblNum1, double dblNum2) {
+        return dblNum1 / dblNum2;
+    }
+
+    public static double exponent(double base, double power) {
+        return Math.pow(base, power);
+        }
+
+    public static double squareRoot(double number) {
+        return Math.sqrt(number);
+    }
+
 }
