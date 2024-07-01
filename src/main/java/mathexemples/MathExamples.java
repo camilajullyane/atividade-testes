@@ -1,6 +1,7 @@
 package mathexemples;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.DecimalFormat;
 
 public class MathExamples 
 {
@@ -17,7 +18,7 @@ public class MathExamples
         RoundingMode rmHalfUp = RoundingMode.HALF_UP;
         BigDecimal bdNumE = new BigDecimal (0.1).setScale(1, rmHalfUp);
         BigDecimal bdNumF = new BigDecimal (0.2).setScale(1, rmHalfUp);
-
+        DecimalFormat dFormat = new DecimalFormat("#, ###.###");
 
 
         System.out.println(intNumA + " + " +  intNumB + " = " + add(intNumA,intNumB));
@@ -30,8 +31,8 @@ public class MathExamples
         System.out.println((0.1f == 0.1d));
         System.out.println(bdNumE + " + " + bdNumF + " = " + add(bdNumE, bdNumF));
         System.out.println("The cube root of " + dblNumC + " = " + cubeRoot(dblNumC));
-        System.out.println("The absolute value of " + dblNumC + " = " + absoluteVal(dblNumC));
-        System.out.println("The absolute value of " + dblNumG + " = " + absoluteVal(dblNumG));
+        System.out.println("The absolute value of " + dblNumC + " = " + dFormat.format(absoluteVal(dblNumC)));
+        System.out.println("The absolute value of " + dblNumG + " = " + dFormat.format(absoluteVal(dblNumG)));
     }
 
     public static int add(int intNum1, int intNum2) {
