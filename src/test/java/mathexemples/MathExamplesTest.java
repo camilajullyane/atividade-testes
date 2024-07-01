@@ -24,6 +24,11 @@ public class MathExamplesTest
         assertEquals(2, MathExamples.subtract(5, 3));
     }
 
+    @Test 
+    void testDivide() {
+        assertEquals(1, MathExamples.divide(5, 3));
+
+    }
     @Test
     void testModulo() {
         assertEquals(2, MathExamples.modulo(5, 3));
